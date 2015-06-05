@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>RockyVida Radio</title>
+    <style type="text/css">
+      
+        #playcontrols {
+          text-align: center;
+          margin-top: 50px;
+        }
+        #playcontrols #carga, #playcontrols #stopbutton {
+          display: none;
+        }
+        
+        #textpositiondiv {
+          margin-top: 100px;
+        }
+      
+      </style>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="lib/ionic-service-analytics/ionic-analytics.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/html5audio.js"></script>
+
+  </head>
+  <body ng-app="starter" class="platform-android platform-cordova platform-webview">
+
+    <ion-pane>
+    <div class="bar bar-header bar-assertive">
+      <h1 class="title">RockyVida Radio </h1>
+    </div>
+
+      <ion-content>
+      <br><br><br>
+      <button class="button button-full button-balanced" href="https://www.facebook.com/RockyVidaPortal?fref=ts">
+        Radio en Vivo !!
+      </button>
+      <!--
+      <div class="list list-inset">
+          <div class="item">
+            Radio en Vivo !!
+          </div>
+      </div>
+    -->
+    <div id="playcontrols">
+      <a href="#" id="playbutton" onclick="html5audio.play();return false;"><img src="img/playbutton.png"></a>
+      <a href="#" id="carga" onclick="html5audio.stop();return false;"><img src="img/carga.gif"></a>
+      <a href="#" id="stopbutton" onclick="html5audio.stop();return false;"><img src="img/stopbutton.png"></a>
+    </div>
+   <!-- <div id="textpositiondiv">Time played: <span id="textposition">stopped</span></div>-->
+    <script type="text/javascript">
+      playButton = document.getElementById('playbutton');
+      stopButton = document.getElementById('stopbutton');
+      carga = document.getElementById('carga');
+      textPosition = document.getElementById('textposition');
+    </script>
+
+    <div class="card">
+      <div class="item item-divider">
+        Programas
+      </div>
+      <div class="item item-text-wrap">
+        #RyVWifi &#xA0;&#xA0;|&#xA0;&#xA0; Mie y Vie de 16 a 18hs
+      </div>
+
+      <div class="item item-text-wrap">
+        #RyVElprograma &#xA0;|&#xA0; Mie de 18 a 19hs
+      </div>
+      <div class="item item-text-wrap">
+        #RyVEnElAire &#xA0;&#xA0;&#xA0;&#xA0;|&#xA0;&#xA0;&#xA0; Vie de 22 a 00hs
+      </div>
+      <div class="item item-text-wrap">
+        #RyVRanking  &#xA0;&#xA0;&#xA0;&#xA0;|&#xA0;&#xA0; Sab de 13 a 15hs
+      </div>
+      <div class="item item-text-wrap">
+        #RyVRevolucion &#xA0;|&#xA0; Sab de 16 a 18hs
+      </div>
+      <div class="item item-text-wrap">
+        #RyVPlay  &#xA0;&#xA0;&#xA0;&#xA0;|&#xA0;&#xA0;&#xA0; Sab de 19 a 21hs
+      </div>      
+    </div>
+
+
+<a href="https://www.facebook.com/RockyVidaPortal?fref=ts" target="_self" name="ejemplo"><button class="button button-full button-positive">
+  Facebook: RockyVida Portal
+</button></a>
+<a href="https://twitter.com/RockyVidaPortal" target="_blank" name="ejemplo"><button class="button button-full button-calm">
+  Twitter: @RockyVidaPortal
+</button></a>
+
+<a href="http://www.rockandvidaportal.com/" target="_blank" name="ejemplo"><button class="button button-full button-assertive">
+  Web: www.rockandvidaportal.com
+</button></a>
+
+
+  </ion-content>
+</ion-pane>
+</body>
+</html>
